@@ -1,20 +1,41 @@
 #include <iostream>
-
+#include <vector>
 using namespace std;
+vector <string> history;
+
+void showLines(const vector<string>& lines){
+    system("cls");
+    for (const auto& line : lines){
+        cout<<line<<endl;
+    }
+}
 
 int main(){
+    string y;
+    string x;
+    vector<string> lines; 
+    bool run = true;
 
-    string add;
-    string deleteT;
-    int x;
-    string z;
+    cout<<"que quieres hacer?\n";
+    cout<<"add\n";
+    cout<<"delete\n";
+    cin>>x;
 
-    cout<<"¿que quieres hacer?";
-    cout<<"add";
-    cout<<"delete";
-    cin>>z;
+    while(run == true){
 
-    if(z == "add"){
-        
+        if(x == "add"){
+            cout<<"escriba para agregar: \n";
+            cin>>y;
+            if(y == "exit()"){
+                run = false;
+                return 0;
+            }
+            else{
+                lines.push_back(y);
+                showLines(lines);
+            }
+        }
+
     }
+    return 0;
 }
