@@ -1,2 +1,2 @@
 all:
-	g++ -o gestion_app lists.cpp 
+	g++ -o gestion_app lists.cpp
